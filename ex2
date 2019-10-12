@@ -1,0 +1,17 @@
+############################
+# variable scope example 2:
+############################
+#!/usr/local/bin/perl
+use strict;
+use warnings;
+
+my $fname = "Foo";
+print "$fname\n"; # Foo
+
+{
+    print "$fname\n";  #Foo
+    
+    my $fname = "Other"; #override
+    print "$fname\n";   # Other
+}
+print "$fname\n";  #Foo
